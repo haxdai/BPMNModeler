@@ -16,8 +16,7 @@
 		ajax.open("GET", "images/svg-defs.svg", true);
 		ajax.responseType = "document";
 		ajax.onload = function(e) {
-		  document.body.insertBefore(ajax.responseXML.documentElement,
-		                             document.body.childNodes[0]);
+		  document.body.insertBefore(ajax.responseXML.documentElement,document.body.childNodes[0]);
 		}
 		ajax.send();
  	}

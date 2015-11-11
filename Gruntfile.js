@@ -53,25 +53,12 @@ module.exports = function (grunt) {
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'postcss']
-      }
-    },
-
-    svgstore: {
-      options: {
-        prefix: 'icon-',
-        includeTitleElement: false,
-        svg: {
-          style: 'position: absolute; width: 0; height: 0;',
-          xmlns: 'http://www.w3.org/2000/svg'
-        },
-        symbol: {
-          viewBox: '0 0 32 32'
-        }
       },
-      dist: {
-        files: {
-          '<%= config.dist %>/images/svg-defs.svg': ['<%= config.app %>/images/svgsprites/*.svg'],
-          '.tmp/images/svg-defs.svg': ['<%= config.app %>/images/svgsprites/*.svg']
+      svgmin : {
+        files: ['<%= config.app %>/images/svgsprites/*.svg'],
+        tasks: ['svgstore'],
+        options: {
+          livereload: true
         }
       }
     },
@@ -282,6 +269,27 @@ module.exports = function (grunt) {
           src: '{,*/}*.{gif,jpeg,jpg,png}',
           dest: '<%= config.dist %>/images'
         }]
+      }
+    },
+
+    svgstore: {
+      options: {
+        prefix: 'icon-',
+        includeTitleElement: false,
+        cleanup: true,
+        svg: {
+          style: 'position: absolute; width: 0; height: 0;',
+          xmlns: 'http://www.w3.org/2000/svg'
+        },
+        symbol: {
+          viewBox: '0 0 32 32'
+        }
+      },
+      dist: {
+        files: {
+          '<%= config.dist %>/images/svg-defs.svg': ['<%= config.app %>/images/svgsprites/*.svg'],
+          '.tmp/images/svg-defs.svg': ['<%= config.app %>/images/svgsprites/*.svg']
+        }
       }
     },
 
