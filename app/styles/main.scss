@@ -1,0 +1,110 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/************** Modeler styles **************/
+li.separator {
+    border-bottom: 1px solid lightgray;
+    margin: 5px -2px !important;
+    background: none;
+}
+
+ul.swbp-modeler-toolbar-item li {
+    padding:4px 2px 0px 2px;
+    margin:1px;
+}
+
+ul.swbp-modeler-toolbar-item li:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7e1eb+0,f6f7f8+50,f6f7f8+50,f6f7f8+89,f6f7f8+100 */
+    background: #d7e1eb; /* Old browsers */
+    background: -moz-linear-gradient(right,  #d7e1eb 0%, #f6f7f8 50%, #f6f7f8 50%, #f6f7f8 89%, #f6f7f8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, right top, left top, color-stop(0%,#d7e1eb), color-stop(50%,#f6f7f8), color-stop(50%,#f6f7f8), color-stop(89%,#f6f7f8), color-stop(100%,#f6f7f8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(right,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* IE10+ */
+    background: linear-gradient(to left,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e1eb', endColorstr='#f6f7f8',GradientType=1 ); /* IE6-9 */
+    border-radius: 3px;
+}
+            
+div.swbp-modeler-toolbar {
+    position: fixed;
+    overflow-y: scroll;
+    top:400;
+    left:0;
+    height: 100%;
+    border: 1px solid #5d6e80;
+    padding:5px;
+    border-radius: 3px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7e1eb+0,f6f7f8+50,f6f7f8+50,f6f7f8+89,f6f7f8+100 */
+    background: #d7e1eb; /* Old browsers */
+    background: -moz-linear-gradient(left,  #d7e1eb 0%, #f6f7f8 50%, #f6f7f8 50%, #f6f7f8 89%, #f6f7f8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d7e1eb), color-stop(50%,#f6f7f8), color-stop(50%,#f6f7f8), color-stop(89%,#f6f7f8), color-stop(100%,#f6f7f8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* IE10+ */
+    background: linear-gradient(to right,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e1eb', endColorstr='#f6f7f8',GradientType=1 ); /* IE6-9 */
+}
+            
+ul.swp-modeler-submenu {
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 25px -4px rgba(0,0,0,0.63);
+    -moz-box-shadow: 1px 1px 25px -4px rgba(0,0,0,0.63);
+    box-shadow: 1px 1px 25px -4px rgba(0,0,0,0.63);
+    display: inline-block;
+    position: absolute;
+    left:60px; /*eliminar*/
+}
+
+ul.swp-modeler-submenu li:first-child {
+    margin-left: 4px;
+}
+
+ul.swp-modeler-submenu li:last-child {
+    margin-right: 4px;
+}
+
+ul.swp-modeler-submenu li {
+    display: inline-block;
+    padding:4px 2px 0px 2px;
+    margin:1px;
+}
+
+ul.swp-modeler-submenu {
+    background-color: #edf1f6;
+}
+
+ul.swp-modeler-submenu li:hover {
+    background-color: #b3bdc7;
+    border-radius: 3px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    fill: currentColor;
+    /* margin-top: 4px;*/
+}
+
+li.separator:hover {
+    background: none !important;
+}
