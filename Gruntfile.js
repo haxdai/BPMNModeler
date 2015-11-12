@@ -231,7 +231,7 @@ module.exports = function (grunt) {
           '<%= config.dist %>/images/{,*/}*.*',
           '<%= config.dist %>/styles/fonts/{,*/}*.*',
           '<%= config.dist %>/*.{ico,png}',
-          '!<%= config.dist %>/images/{,*/}svg-defs.*' //exclude svg definitions
+          '!<%= config.dist %>/images/{,*/}*-defs.*' //exclude svg definitions
         ]
       }
     },
@@ -373,6 +373,11 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
           dest: '<%= config.dist %>'
+        }, {//To workaround font-awesome bad relative path - http://unknownerror.org/opensource/gruntjs/grunt/q/stackoverflow/21310382/fontawesome-is-not-working-when-project-is-built-with-grunt
+          expand: true,
+          cwd: 'bower_components/font-awesome/fonts/',
+          src: '*.*',
+          dest: '<%= config.dist %>/fonts'
         }]
       }
     },
