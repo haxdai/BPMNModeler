@@ -50,10 +50,20 @@
     </div>
     <div class="modeler-canvas-container">
       <div class="modeler-canvas-scroll">
-        <div class="paper">
-          <img src="images/BPMN-Hardware-Retailer.png"/>
+        <div class="modeler-paper" id="modelerContainer">
+          <!--img src="images/BPMN-Hardware-Retailer.png"/-->
         </div>
       </div>
+    </div>
+    <div class="modeler-statusbar">
+      <ul class="list-unstyled list-inline">
+      <li><a href="#"><span class="fa fa-home"></span></a></li>
+      <li><span class="fa fa-caret-right"></span></li>
+      <li><a href="#">Inner</a></li>
+      <li><span class="fa fa-caret-right"></span></li>
+      <li><a href="#">More inner</a></li>
+      </ul>
+    
     </div>
       
       <!--ul class="list-unstyled swp-modeler-submenu">
@@ -85,6 +95,11 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/bpmnmodeler.js -->
+    <script src="scripts/modeler.js"></script>
+    <script src="scripts/toolkit.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
