@@ -12,7 +12,7 @@
 	};
 
  	if (app.svgSupport()) {
- 		var ajax = new XMLHttpRequest();
+		var ajax = new XMLHttpRequest();
 		ajax.open("GET", "images/svg-defs.svg", true);
 		ajax.responseType = "document";
 		ajax.onload = function(e) {
