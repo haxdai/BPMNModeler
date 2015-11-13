@@ -21,7 +21,9 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    deployrepo: 'https://github.com/haxdai/BPMNModeler.git',//Change accordingly
+    deploybranch:'gh-pages' //Change accordingly,
   };
 
   // Define the configuration for all the tasks
@@ -388,11 +390,12 @@ module.exports = function (grunt) {
         dir: 'dist',
         commit:true,
         push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
       pages: {
         options: {
-          remote: 'origin',
-          branch: 'gh-pages'
+          remote: '<%= config.deployrepo %>',
+          branch: '<%= config.deploybranch %>'
         }
       }
     },
