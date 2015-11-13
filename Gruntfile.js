@@ -14,7 +14,8 @@ module.exports = function (grunt) {
 
   // Automatically load required grunt tasks
   require('jit-grunt')(grunt, {
-    useminPrepare: 'grunt-usemin'
+    useminPrepare: 'grunt-usemin',
+    buildcontrol: 'grunt-build-control'
   });
 
   // Configurable paths
@@ -382,6 +383,20 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit:true,
+        push: true,
+      },
+      pages: {
+        options: {
+          remote: 'https://github.com/haxdai/BPMNModeler.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
@@ -453,6 +468,10 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'buildcontrol:pages'
   ]);
 
   grunt.registerTask('default', [
