@@ -391,7 +391,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://github.com/haxdai/BPMNModeler.git',
+          remote: 'origin',
           branch: 'gh-pages'
         }
       }
