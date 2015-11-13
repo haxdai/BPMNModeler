@@ -375,9 +375,9 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>'
         }, {//To workaround font-awesome bad relative path - http://unknownerror.org/opensource/gruntjs/grunt/q/stackoverflow/21310382/fontawesome-is-not-working-when-project-is-built-with-grunt
           expand: true,
-          cwd: 'bower_components/font-awesome/fonts/',
-          src: '*.*',
-          dest: '<%= config.dist %>/fonts'
+          cwd: '.',
+          src: 'bower_components/font-awesome/fonts/*',
+          dest: '<%= config.dist %>'
         }]
       }
     },
