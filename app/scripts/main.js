@@ -1,25 +1,36 @@
 (function(window) {
-	var app = window.app || {},
-		document = window.document;
+	var app = window.MODELER || {version:"0.1.0"},
+		document = window.document,
+		SVG = window.SVG;
 
-	app.version = "0.1.0";
+	if (SVG && !SVG.supported) {
+		return app;
+	}
 
-	/*script from https://css-tricks.com/inline-svg-grunticon-fallback*/
-	app.svgSupport = function() {
-	 	var div = document.createElement('div');
-	 	div.innerHTML = '<svg/>';
-		return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
-	};
-
- 	if (app.svgSupport()) {
+	function getSVGDocument(filePath, containerId, callback) {
 		var ajax = new XMLHttpRequest();
-		ajax.open("GET", "images/svg-defs.svg", true);
+		ajax.open("GET", filePath, true);
 		ajax.responseType = "document";
 		ajax.onload = function(e) {
-		  document.body.insertBefore(ajax.responseXML.documentElement,document.body.childNodes[0]);
+			if (containerId) {
+				var c = document.getElementById(containerId);
+				c && c.appendChild(ajax.responseXML.documentElement);
+			} else {
+				document.body.insertBefore(ajax.responseXML.documentElement,document.body.childNodes[0]);
+			}
+			if (callback && typeof callback == "function") {
+				callback();
+			}
 		}
 		ajax.send();
- 	}
+	};
 
-	window.app = app;
+	//load toolbar and SVG BPMN assets
+	getSVGDocument("images/svg-defs.svg", null, function() {
+		getSVGDocument("images/modeler-defs.svg", "modelerContainer", function() {
+			app.svg = SVG.adopt(document.getElementById("modeler"));
+			app.svg.size(2000, 2000);
+		});
+	});
+	window.MODELER = app;
 })(window);
