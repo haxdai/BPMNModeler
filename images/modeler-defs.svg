@@ -1,0 +1,205 @@
+<svg id="modeler" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" class="modeler"><style><![CDATA[
+            .resizeBox {
+                stroke:#696161;
+                stroke-width:1px;
+            }
+
+            text {
+                font-family: Verdana, sans-serif;
+                font-size: 10px;
+                stroke: none;
+                fill: #000;
+                cursor: pointer;
+            }
+
+            /*Common fill properties for activities*/
+            .task, .task_o, .callactivity, .callactivity_o, .eventsubTask, .eventsubTask_o, .transactionSquare, .taskMarker, .pathMarker {
+                fill:url(#linearGradientTask);
+                stroke:#79adc8;
+                stroke-width: 1px;
+                cursor: pointer;
+            }
+
+            .callactivity, .callactivity_o {
+                stroke-width:2px;
+            }
+
+            .eventsubTask, .eventsubTask_o {
+                stroke-dasharray:6,4;
+            }
+
+            .task_o, .callactivity_o, .eventsubTask_o {
+                stroke:#2cff20;
+            }
+
+            .transactionSquare {
+                fill:none;
+            }
+
+            .pathMarker{
+                fill:none;
+            }
+
+            /*Common fill properties for events*/
+            .startEvent, .startEvent_o {
+                stroke:#008000;
+                fill:url(#linearGradientStartEvent);
+                stroke-width:1px;
+                cursor:pointer;
+            }
+
+            .startEvent_o {
+                stroke:#2cff20;
+            }
+
+            .startMarker {
+                stroke:#008000;
+                fill:none;
+                stroke-width:2px;
+            }
+
+            .startFilledMarker{
+                fill:#008000;
+                stroke:none;
+            }
+
+            .intermediateInterruptingEvent, .intermediateInterruptingEvent_o, .intermediateEvent, .intermediateEvent_o, .intermediateEvent1 {
+                stroke:#2c5aa0;
+                fill:url(#linearGradientIntermediateEvent);
+                stroke-width:1px;
+                cursor:pointer;
+            }
+
+            .intermediateInterruptingEvent {
+                stroke-dasharray: 3,3;
+                /*stroke-dashoffset: 5;*/
+            }
+
+            .intermediateEvent_o, .intermediateInterruptingEvent_o {
+                stroke:#2cff20;
+                /*stroke-dashoffset: 5;*/
+            }
+
+            .intermediateEvent1 {
+                fill:none;
+            }
+
+            .intermediateMarker, .intermediateFilledMarker {
+                fill:none;
+                stroke:#2c5aa0;
+                stroke-width:2px;
+                cursor:pointer;
+            }
+
+            .intermediateFilledMarker {
+                fill:#2c5aa0;
+                stroke-width:1px;
+            }
+
+            .endEvent, .endEvent_o {
+                stroke:#550000;
+                fill:url(#linearGradientEndEvent);
+                stroke-width:2px;
+                cursor:pointer;
+            }
+
+            .endEvent_o {
+                stroke:#2cff20;
+            }
+
+            .endFilledMarked {
+                fill:#550000;
+                stroke:#550000;
+                stroke-width:1px;
+                cursor:pointer;
+            }
+
+            /*Common fill properties for gateways*/
+            .gateway, .gateway_o {
+                stroke:#d4aa00;
+                fill:url(#linearGradientGateway);
+                stroke-width:1px;
+                cursor:pointer;
+            }
+
+            .gateway_o {
+                stroke:#2cff20;
+            }
+
+            /*Common fill properties for lines*/
+            .sequenceFlowSubLine, .sequenceFlowSubLine_o, .sequenceFlowLine, .sequenceFlowLine_o {
+                fill:none;
+                stroke-width:10px;
+                cursor:pointer;
+            }
+
+            .sequenceFlowLine, .sequenceFlowLine_o {
+                stroke-width: 1px;
+            }
+
+            .sequenceFlowSubLine {
+                stroke:#ffffff;
+                stroke-opacity:0.1;
+            }
+
+            .sequenceFlowLine {
+                stroke: #000000;
+            }
+
+            .sequenceFlowLine_o {
+                stroke:#2cff20;
+            }
+
+            /*Common fill properties for swimlanes*/
+            .swimlane, .swimlane_o {
+                fill: #FFF;
+                stroke-width:1px;
+                stroke: #ADADAE;
+                cursor:pointer;
+            }
+
+            .swimlane_o {
+                stroke:#2cff20;
+            }
+
+            /*Common fill properties for dataobjects*/
+            .itemaware, .itemaware_o {
+                fill:url(#linearGradientDataObject);
+                stroke:#666666;
+                stroke-width:1px;
+                cursor:pointer;
+            }
+
+            .itemaware_o {
+                stroke:#2cff20;
+            }
+
+            /*Common fill properties for annotations*/
+            .group, .group_o {
+                stroke:#2c5aa0;
+                cursor:pointer;
+                fill:none;
+                stroke-width:1.5px;
+            }
+
+            .group_o {
+                stroke:#2cff20;
+            }
+
+            .annotationArtifact, .annotationArtifactRect {
+                fill:none;
+                stroke:#000000;
+                stroke-width:1px;
+                cursor:pointer;
+            }
+
+            .annotationArtifactRect, .annotationArtifactRect_o {
+                stroke:none;
+                fill:#FFF;
+                fill-opacity:1;
+            }
+
+            .annotationArtifactRect_o {
+                stroke:#2cff20;
+            }
+            ]]></style><defs id="globalDef"><linearGradient id="linearGradientStartEvent" x1="0%" y1="0%" y2="100%"><stop offset="10%" stop-color="#fff"/><stop offset="90%" stop-color="#cfa"/></linearGradient><linearGradient id="linearGradientEndEvent" x1="0%" y1="0%" y2="100%"><stop offset="10%" stop-color="#fff"/><stop offset="90%" stop-color="#e7c1c1"/></linearGradient><linearGradient id="linearGradientTask" x1="100%" y1="0%" y2="100%"><stop offset="10%" stop-color="#fff"/><stop offset="100%" stop-color="#c1d3e1"/></linearGradient><linearGradient id="linearGradientIntermediateEvent" x1="0%" y1="0%" y2="100%"><stop offset="10%" stop-color="#fff"/><stop offset="100%" stop-color="#87aade"/></linearGradient><linearGradient id="linearGradientGateway" x1="0%" y1="0%" y2="100%"><stop offset="10%" stop-color="#FFFDE2"/><stop offset="100%" stop-color="#FFFAA6"/></linearGradient><linearGradient id="linearGradientDataObject" x1="0%" y1="0%" y2="100%"><stop offset="10%" stop-color="#fff"/><stop offset="100%" stop-color="#afbac7"/></linearGradient><circle id="resizeBox" r="5" class="resizeBox"/><path id="lineHandler" class="lineHandler" d="M0 0h10v10H0z"/><path id="errorMarker" d="M-8.925 7.652l5.977-13.89 5.266 7.693 6.83-9.616L3.1 6.37-2.165-.112l-6.76 7.764z"/><path d="M-7.52-7.52V6.53H7.44V-7.52zm1.36 3.16h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24zm-6.4 2.56h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24zM-6.16.76h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24zm-6.4 2.56h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24z" id="ruleMarker"/><path d="M-7.52-7.52V6.53H7.44V-7.52zm1.36 3.16h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24zm-6.4 2.56h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24zM-6.16.76h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24zm-6.4 2.56h5.92v1.55h-5.92zm6.4 0h5.92v1.55H.24z" id="taskRuleMarker" class="intermediateFilledMarker"/><path id="multipleMarker" d="M5.95 8.05l-11.81.13L-9.63-3.01l9.476-7.047 9.63 6.836z"/><path id="parallelMarker" d="M-1.75-8.75v6.818h-6.81v3.697h6.81v6.817h3.705V1.765h6.818v-3.697H1.955V-8.75z"/><path id="linkMarker" d="M8.05 0L.9-8.47v5.94h-8.772v4.947h8.77v6.066z"/><path id="complexMarker" d="M-1-20v15.875l-11.25-11.22-2.344 2.314 11.25 11.25H-19.25v3.31h15.906l-11.25 11.22 2.344 2.344L-1 3.874V19.75h3.28V3.844l11.25 11.25 2.314-2.344L4.624 1.53H20.5v-3.31H4.625L15.845-13l-2.314-2.344L2.28-4.094V-20z"/><path id="signalMarker" d="M8.4 4.9H-8.12l4.13-7.153L.14-9.406l4.13 7.153z"/><path id="scalationMarker" d="M0-9.1L-7.47 7.408 0 1.325l7.47 6.083L0-9.1z"/><path id="cancelMarker" d="M6.3-7.7L-.127-1.273l-6.435-6.435L-7.73-6.54l6.435 6.435L-7.73 6.33l1.168 1.167 6.435-6.434L6.3 7.49l1.168-1.168L1.04-.105 7.47-6.532z"/><path d="M0 0c-.177 0-.34.047-.49.116h-.015C-1.32.363-1.91 2.782-2.393 4.11c-.148.36-.236.75-.236 1.164v3.11c0 1.705 1.392 3.078 3.12 3.078h12.005c.635 0 1.146-.504 1.146-1.13 0-.628-.51-1.132-1.145-1.132h-2.022c.007-.028.018-.055.025-.083h2.705c.634 0 1.145-.505 1.145-1.132 0-.626-1.78-1.13-1.145-1.13H10.59V6.81h3.405c.634 0 1.145-.504 1.145-1.13 0-.627-.51-1.132-1.145-1.132H10.49c-.008-.03-.01-.062-.017-.092h4.92c.635 0 1.146-.504 1.146-1.13 0-.628-.512-1.132-1.147-1.132H6.875c.454-.15.784-.565.784-1.065C7.66.506 7.147 0 6.512 0H0z" class="taskMarker pathMarker" id="manualMarker"/><g id="messageThrowMarker" stroke="#fff" stroke-opacity=".4"><path d="M-9.75-5.85V6.078h19.3V-5.85h-.03L-.11.194-9.75-5.85z" stroke-width="1.3"/><path d="M-8.97-5.85L-.015-.235 8.94-5.85" stroke-width="1.3"/></g><g id="taskMessageThrowMarker" class="intermediateFilledMarker" stroke="#fff" stroke-opacity=".4"><path d="M-9.75-5.85V6.078h19.3V-5.85h-.03L-.11.194-9.75-5.85z" stroke-width="1.3"/><path d="M-8.97-5.85L-.015-.235 8.94-5.85" stroke-width="1.3"/></g><g id="messageCatchMarker"><path d="M-9.45-5.95H8.996v11.4H-9.45z"/><path d="M-9.45-5.95L-.242-.177 8.966-5.95"/></g><g id="taskMessageCatchMarker" class="intermediateMarker"><path d="M-9.45-5.95H8.996v11.4H-9.45z"/><path d="M-9.45-5.95L-.242-.177 8.966-5.95"/></g><g id="compensaMarker"><path d="M-.7-4.55v9.928L-9.298.414z"/><path d="M7.35-4.55v9.928L-1.248.414z"/></g><filter id="dropshadow" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="3"/><feOffset result="offsetblur"/><feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><g id="timerMarker"><path d="M8.94.054a8.905 8.905 0 1 1-17.81 0 8.905 8.905 0 1 1 17.81 0zM8.925.054h-3.07M.143-8.825L.11-5.755M-8.833-.087l3.07.05M.017 8.933l.01-3.07M4.464.054H-.04M1.888-5.122L.175.025M6.393-6.155L4.2-4.01M6.255 6.4L4.108 4.208M-6.302 6.263l2.194-2.146M-6.164-6.293L-4.017-4.1"/></g><g id="userMarker" class="taskMarker"><path d="M0-2.4c-2.653 0-4.8 2.245-4.8 5 0 1.604.743 3.012 1.875 3.925-2.64 1.42-4.547 4.703-4.8 8.6h15.45c-.253-3.896-2.166-7.18-4.8-8.6C4.057 5.612 4.8 4.205 4.8 2.6c0-2.755-2.147-5-4.8-5zM3.395 6.12a4.803 4.99 0 0 1-6.41.353M-4.095 14.986v-3.073M4.095 14.986v-3.073" class="pathMarker"/><path d="M.05-1.916c-2.487 0-4.533 1.948-4.547 4.425.717-.868 1.368-1.352 2.467-1.352 1.657 0 3.555.86 4.975.615.456-.08 1.01-.305 1.552-.582C4.01-.625 2.057-1.915.05-1.915z" fill="#2c5aa0"/></g><g id="serviceMarker" class="taskMarker"><path d="M0 0l1.182-2.073c-.61-.373-1.28-.658-1.996-.83l-.614 2.304h-1.997l-.63-2.302c-.715.17-1.386.455-1.996.83l1.19 2.057-1.413 1.412L-8.34.215c-.373.61-.657 1.28-.828 1.996l2.296.615V4.83l-2.288.62c.173.71.45 1.383.82 1.99l2.05-1.183" class="pathMarker"/><path d="M0 0c-.792.19-1.533.503-2.207.917L-.89 3.19l-1.563 1.563-2.283-1.307c-.414.674-.728 1.415-.917 2.206l2.538.68v2.215l-2.53.687c.192.785.498 1.527.91 2.198l2.265-1.307 1.562 1.562-1.307 2.283c.677.418 1.42.734 2.215.925l.68-2.546h2.206l.696 2.545c.79-.19 1.532-.503 2.207-.917l-1.317-2.274 1.562-1.562 2.292 1.307c.412-.672.726-1.412.916-2.2l-2.546-.686V6.348l2.546-.696c-.19-.79-.502-1.532-.916-2.206L6.043 4.77l-1.56-1.562L5.788.918C5.114.503 4.37.187 3.58 0l-.68 2.546H.697zm1.79 4.558c1.596 0 2.887 1.29 2.887 2.885 0 1.595-1.29 2.894-2.886 2.894-1.594 0-2.885-1.3-2.885-2.894 0-1.595 1.29-2.885 2.886-2.885z" class="pathMarker"/></g><g id="scriptMarker" class="taskMarker"><path d="M0 0c2.494 2.086 2.465 5.544 0 7.588v.083h9.517c2.972-2.135 3.29-6.078.022-8.72-1.205-1.01-1.47-2.29-1.61-3.883 0-1.343.558-2.542 1.437-3.356H2.942C-2.418-8.547-3.168-2.466 0 0zM0-5.6h6.672M-.35-2.91h6.672M1.75 0h6.672M3.15 2.8h6.672M2.8 5.6h6.672" class="pathMarker"/></g><g id="subProcessMarker" class="taskMarker"><path fill="#fff" fill-opacity=".1" d="M-7-7H7V7H-7z"/><path d="M-5 0H5M0-5V5"/></g><marker id="sequenceArrow" viewBox="0 0 12 12" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto" stroke-dasharray="0"><path d="M0 0l10 5-10 5"/></marker><marker id="messageArrow" viewBox="0 0 12 12" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="0"><path d="M0 0l10 5-10 5"/></marker><marker id="conditionTail" viewBox="-6 -6 12 12" refX="3" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="0"><path d="M-4.243 0L0-4.243 4.243 0 0 4.243z"/></marker><marker id="defaultTail" viewBox="0 0 12 12" refX="-3" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="0"><path d="M5 0L0 10"/></marker><marker id="messageTail" viewBox="-5 -5 12 12" refX="3" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="0"><circle r="3"/></marker><circle id="startEvent" r="15"/><g id="messageStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#messageCatchMarker" class="startMarker"/></g><g id="timerStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#timerMarker" class="startMarker"/></g><g id="ruleStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#ruleMarker" class="startFilledMarker" transform="scale(1.1)"/></g><g id="signalStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#signalMarker" class="startMarker"/></g><g id="multipleStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#multipleMarker" class="startMarker"/></g><g id="parallelStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#parallelMarker" class="startMarker"/></g><g id="scalationStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#scalationMarker" class="startMarker"/></g><g id="errorStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#errorMarker" class="startMarker"/></g><g id="compensationStartEvent"><use xlink:href="#startEvent"/><use xlink:href="#compensaMarker" class="startMarker"/></g><g id="intermediateEvent"><circle r="15"/><circle r="12" class="intermediateEvent1"/></g><g id="messageIntermediateCatchEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#messageCatchMarker" class="intermediateMarker"/></g><g id="messageIntermediateThrowEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#messageThrowMarker" class="intermediateFilledMarker"/></g><g id="timerIntermediateEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#timerMarker" class="intermediateMarker"/></g><g id="errorIntermediateEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#errorMarker" class="intermediateMarker"/></g><g id="cancelIntermediateEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#cancelMarker" class="intermediateFilledMarker"/></g><g id="compensationIntermediateCatchEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#compensaMarker" class="intermediateMarker"/></g><g id="compensationIntermediateThrowEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#compensaMarker" class="intermediateFilledMarker"/></g><g id="ruleIntermediateEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#ruleMarker" class="intermediateFilledMarker"/></g><g id="linkIntermediateCatchEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#linkMarker" class="intermediateMarker"/></g><g id="linkIntermediateThrowEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#linkMarker" class="intermediateFilledMarker"/></g><g id="signalIntermediateCatchEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#signalMarker" class="intermediateMarker"/></g><g id="signalIntermediateThrowEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#signalMarker" class="intermediateFilledMarker"/></g><g id="multipleIntermediateCatchEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#multipleMarker" class="intermediateMarker"/></g><g id="multipleIntermediateThrowEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#multipleMarker" class="intermediateFilledMarker"/></g><g id="scalationIntermediateCatchEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#scalationMarker" class="intermediateMarker"/></g><g id="scalationIntermediateThrowEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#scalationMarker" class="intermediateFilledMarker"/></g><g id="parallelIntermediateEvent"><use xlink:href="#intermediateEvent"/><use xlink:href="#parallelMarker" class="intermediateMarker"/></g><circle id="endEvent" r="15"/><g id="messageEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#messageThrowMarker" class="endFilledMarked"/></g><g id="signalEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#signalMarker" class="endFilledMarked"/></g><g id="scalationEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#scalationMarker" class="endFilledMarked"/></g><g id="errorEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#errorMarker" class="endFilledMarked"/></g><g id="multipleEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#multipleMarker" class="endFilledMarked"/></g><g id="cancelationEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#cancelMarker" class="endFilledMarked"/></g><g id="terminationEndEvent"><use xlink:href="#endEvent"/><circle r="8" class="endFilledMarked"/></g><g id="compensationEndEvent"><use xlink:href="#endEvent"/><use xlink:href="#compensaMarker" class="endFilledMarked"/></g><path id="gateway" d="M0-24.75L24.75 0 0 24.75-24.75 0z"/><g id="exclusiveDataGateway"><use xlink:href="#gateway"/><use xlink:href="#cancelMarker" transform="scale(1.3)" fill="#d4aa00"/></g><g id="inclusiveDataGateway"><use xlink:href="#gateway"/><circle r="14" fill="none" stroke="#d4aa00" stroke-width="2"/></g><g id="exclusiveStartGateway"><use xlink:href="#gateway"/><circle r="14" fill="none" stroke="#d4aa00" stroke-width="2"/><use xlink:href="#multipleMarker" transform="scale(.9)" fill="none" stroke="#d4aa00" stroke-width="4.5"/></g><g id="eventGateway"><use xlink:href="#gateway"/><circle r="14" fill="none" stroke="#d4aa00" stroke-width="2"/><circle r="10" fill="none" stroke="#d4aa00" stroke-width="2"/><use xlink:href="#multipleMarker" transform="scale(.75)" fill="none" stroke="#d4aa00" stroke-width="6"/></g><g id="parallelGateway"><use xlink:href="#gateway"/><use xlink:href="#parallelMarker" transform="scale(1.5)" fill="#d4aa00"/></g><g id="parallelStartGateway"><use xlink:href="#gateway"/><circle r="14" fill="none" stroke="#d4aa00" stroke-width="2"/><use xlink:href="#parallelMarker" stroke="#d4aa00" fill="none" stroke-width="3.5"/></g><g id="complexGateway"><use xlink:href="#gateway"/><use xlink:href="#complexMarker" transform="scale(.7)" fill="#d4aa00"/></g><g id="data"><path d="M-19.6-24.5v52.228h40.76v-38.676L7.24-24.5H-19.6z"/><path d="M7.35-23.8v13.694h14.042"/></g><g id="dataStore"><path d="M1.2-24.4c-16.655 0-30.17 3.374-30.17 7.537 0 .09.026.173.04.263h-.04v37.125h.02c.41 4.074 13.753 7.35 30.15 7.35 16.395 0 29.718-3.276 30.13-7.35h.02V-16.6h-.02c.014-.09.02-.172.02-.263 0-4.163-13.495-7.537-30.15-7.537z"/><path d="M31.2-17.2c0 4.164-13.502 7.54-30.157 7.54-16.435 0-29.844-3.29-30.152-7.4"/></g><g id="dataInput"><use xlink:href="#data"/><use xlink:href="#linkMarker" x="-12" y="-17" transform="scale(.8)" fill="none" stroke="#666" stroke-width="2.5"/></g><g id="dataOutput"><use xlink:href="#data"/><use xlink:href="#linkMarker" x="-12" y="-17" transform="scale(.8)" fill="#666" stroke-width="2.5"/></g><rect x="-50" y="-30" rx="10" ry="10" width="100" height="60" class="task" id="task"/><g id="userTask"><use xlink:href="#task"/><use xlink:href="#userMarker" transform="matrix(.8 0 0 .8 -36 -24)"/></g><g id="serviceTask"><use xlink:href="#task"/><use xlink:href="#serviceMarker" transform="matrix(.8 0 0 .8 -34.4 -21.6)"/></g><g id="scriptTask"><use xlink:href="#task"/><use xlink:href="#scriptMarker" transform="matrix(.7 0 0 .7 -42 -16.8)"/></g><g id="ruleTask"><use xlink:href="#task"/><use xlink:href="#ruleMarker" transform="translate(-35 -17)" fill="#2c5aa0"/></g><g id="sendTask"><use xlink:href="#task"/><use xlink:href="#messageThrowMarker" transform="translate(-35 -19)" fill="#2c5aa0"/></g><g id="receiveTask"><use xlink:href="#task"/><use xlink:href="#messageCatchMarker" transform="translate(-35 -19)" fill="none" stroke="#2c5aa0" stroke-width="3"/></g><g id="manualTask"><use xlink:href="#task"/><use xlink:href="#manualMarker" transform="matrix(.7 0 0 .7 -42 -24.5)" fill="none" stroke="#2c5aa0" stroke-width="4"/></g><g id="pool" stroke-width="2"><path fill="#E8E8FF" d="M-300-100h600v200h-600z"/><path d="M-280-100v200" fill="none"/></g></defs></svg>
