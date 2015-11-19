@@ -44,15 +44,19 @@ body {
 }
 
 /************** Modeler styles **************/
-.visible {
+.anishow {
   display: flex !important;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+  transition: opacity 3s;
+  opacity: 1 !important;
 }
 
-.hidden {
+.anihide {
+  transition: opacity 3s;
+  opacity: 0 !important;
   display: none !important;
 }
 
@@ -70,7 +74,7 @@ div.modeler-toolbar-container {
   padding-top:5px;
 
   ul.modeler-toolbar, ul.modeler-subbar {
-    display: none;
+    opacity: 1;
     li {
       padding:4px 0px 0px 0px;
 

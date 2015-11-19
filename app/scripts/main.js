@@ -28,13 +28,15 @@
 	app.initToolbar = function(mainBarId) {
 		var mainBar = $('.modeler-toolbar-container').find("ul.modeler-toolbar");
 		var subbars = $('.modeler-subbar');
+		$(subbars).addClass("anihide");
+		$(mainBar).addClass("anishow");
 
 		$('a.subbar-close').on("click", function(e) {
 			e.preventDefault();
 			e.stopPropagation();
-			console.log($(this).closest("ul").attr("id"));
-			$(this).closest("ul").removeClass("visible");
-			$(mainBar).addClass("visible");
+			//console.log($(this).closest("ul").attr("id"));
+			$(this).closest("ul").removeClass("anishow").addClass("anihide");
+			$(mainBar).addClass("anishow").removeClass("anihide");
 		});
 
 		$('.modeler-toolbar a').on("click", function(e) {
@@ -42,8 +44,8 @@
 			e.stopPropagation();
 			var target = $(this).data("toggle");
 			if (target) {
-				$(mainBar).removeClass("visible");
-				$("#"+target).addClass("visible");
+				$(mainBar).removeClass("anishow").addClass("anihide");
+				$("#"+target).addClass("anishow").removeClass("anihide");
 			}
 		});
 	};
