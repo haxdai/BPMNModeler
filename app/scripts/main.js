@@ -25,6 +25,32 @@
 		ajax.send();
 	};
 
+	app.initToolbar = function(mainBarId) {
+		var mainBar = $('.modeler-toolbar-container').find("ul.modeler-toolbar");
+		var subbars = $('.modeler-subbar');
+
+		$('a.subbar-close').on("click", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			console.log($(this).closest("ul").attr("id"));
+			$(this).closest("ul").removeClass("visible");
+			$(mainBar).addClass("visible");
+		});
+
+		$('.modeler-toolbar a').on("click", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			var target = $(this).data("toggle");
+			if (target) {
+				$(mainBar).removeClass("visible");
+				$("#"+target).addClass("visible");
+			}
+		});
+	};
+
+	app.initToolbar("mainBar");
+	window.MODELER = app;
+
 	//load toolbar and SVG BPMN assets
 	getSVGDocument("images/svg-defs.svg", null, function() {
 		getSVGDocument("images/modeler-defs.svg", "modelerContainer", function() {
@@ -32,5 +58,5 @@
 			app.svg.size(2000, 2000);
 		});
 	});
-	window.MODELER = app;
+
 })(window);

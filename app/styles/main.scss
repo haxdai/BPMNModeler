@@ -4,12 +4,6 @@ $toolbar-width: 55px;
 $propspanel-width: 0px; //0px - invisible
 $subbar-height:40px;
 $navbar-height:52px;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7e1eb+0,f6f7f8+50,f6f7f8+50,f6f7f8+89,f6f7f8+100 */
-$toolbar-gradient: linear-gradient(to right,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%);
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7e1eb+0,f6f7f8+50,f6f7f8+50,f6f7f8+89,f6f7f8+100 */
-$toolbar-gradient-inverse: linear-gradient(to left,  #d7e1eb 0%,#f6f7f8 50%,#f6f7f8 50%,#f6f7f8 89%,#f6f7f8 100%);
-$toolbar-gradient-top: linear-gradient(to bottom, #d7e1eb 0%,#f6f7f8 100%);
-$propspanel-gradient:linear-gradient(to right, #d7e1eb 0%,#f6f7f8 100%);
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -44,43 +38,20 @@ body {
 //Bootstrap overrides
 .navbar {
   border-radius: 0;
+  border: none;
+  background-color: #328836;
+
+  a.navbar-brand {
+    color:#fff;
+  }
 }
 
-div.modeler-subbar-container {
-  position: absolute;
-  left: $toolbar-width;
-  right:0;
-  top:$navbar-height;
-  background: $toolbar-gradient-top;
-  padding-left:10px;
-  border-bottom: 1px solid lightgray;
-  overflow-x:auto;
-  overflow-y:hidden;
+.visible {
+  display: block !important;
+}
 
-  ul.modeler-submenu {
-    display: flex;
-    flex-wrap: nowrap;
-    list-style-type: none;
-    margin:0;
-    padding: 0;
-    justify-content: flex-start;
-    align-items: center;
-
-    li {
-      display: flex;
-      justify-content: center;
-      //display: inline-block;
-      padding:4px 2px 2px 2px;
-      //margin:1px;
-      //text-align: center;
-      min-width: 40px;
-    }
-
-    li:hover {
-      background-color: #b3bdc7;
-      border-radius: 3px;
-    }
-  }
+.hidden {
+  display: none !important;
 }
 
 //Toolbar
@@ -89,36 +60,36 @@ div.modeler-toolbar-container {
   left:0;
   top:$navbar-height;
   bottom:0;
-  border-right: 1px solid lightgray;
   overflow-y:auto;
   overflow-x:hidden;
-  background: #d7e1eb;
-  background: $toolbar-gradient;
+  background-color: #1c2b36;
   width:$toolbar-width;
+  padding-top:5px;
 
-  ul.modeler-toolbar {
+  ul.modeler-toolbar, ul.modeler-subbar {
+    display: none;
     margin: auto;
     width:30px;
-    
+
     li {
       padding:4px 0px 0px 0px;
-      //margin:1px;
+
+      a {
+        color:#929397;
+
+        &:hover {
+          color: #fff;
+        }
+      }
 
       &.separator {
-        border-bottom: 1px solid lightgray;
-        margin: 5px -2px !important;
+        border-bottom: 1px solid #328836;
+        margin: 5px -5px !important;
         background: none;
       }
 
       &.separator:hover {
         background: none !important;
-      }
-
-      &:hover {
-        background: #d7e1eb;
-        background: $toolbar-gradient-inverse;
-        border-radius: 3px;
-        //box-shadow: 3px 3px 6px -2px rgba(0,0,0,0.51);
       }
     }
   }
@@ -172,36 +143,4 @@ div.modeler-properties {
   border-style: solid;
   border-color: #e7e7e7;
   border-width: 0 0 0 1px;
-  background: $propspanel-gradient;
-}
-
-ul.swp-modeler-submenu {
-    background-color: aliceblue;
-    border: 1px solid gray;
-    border-radius: 3px;
-    -webkit-box-shadow: 1px 1px 25px -4px rgba(0,0,0,0.63);
-    -moz-box-shadow: 1px 1px 25px -4px rgba(0,0,0,0.63);
-    box-shadow: 1px 1px 25px -4px rgba(0,0,0,0.63);
-    display: inline-block;
-    position: absolute;
-    left: $toolbar-width;
-
-    li {
-      display: inline-block;
-      padding:4px 2px 0px 2px;
-      margin:1px;
-    }
-
-    li:first-child {
-      margin-left: 4px;
-    }
-
-    li:last-child {
-      margin-right: 4px;
-    }
-
-    li:hover {
-      background-color: #b3bdc7;
-      border-radius: 3px;
-    }
 }
