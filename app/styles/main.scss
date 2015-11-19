@@ -32,9 +32,7 @@ body {
     fill: currentColor;
 }
 
-/************** Modeler styles **************/
-
-//Bootstrap overrides
+/************** Bootstrap overrides **********/
 .navbar {
   border-radius: 0;
   border: none;
@@ -45,8 +43,13 @@ body {
   }
 }
 
+/************** Modeler styles **************/
 .visible {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .hidden {
@@ -55,6 +58,7 @@ body {
 
 //Toolbar
 div.modeler-toolbar-container {
+  user-select: none;
   position: absolute;
   left:0;
   top:$navbar-height;
@@ -67,9 +71,6 @@ div.modeler-toolbar-container {
 
   ul.modeler-toolbar, ul.modeler-subbar {
     display: none;
-    margin: auto;
-    width:30px;
-
     li {
       padding:4px 0px 0px 0px;
 
@@ -83,8 +84,9 @@ div.modeler-toolbar-container {
 
       &.separator {
         border-bottom: 1px solid #328836;
-        margin: 5px -5px !important;
         background: none;
+        margin-bottom: 5px;
+        width: $toolbar-width*.8;
       }
 
       &.separator:hover {
@@ -114,10 +116,16 @@ div.modeler-canvas-container {
       display: inline-block;
       box-shadow: 0px 0px 9px -3px rgba(0,0,0,0.75);
       margin: 10px;
+      user-select: none; //Disable user selection in canvas
+
+      * {
+        cursor: default; //Default cursor in canvas
+      }
     }
   }
 }
 
+//Status bar
 div.modeler-statusbar {
   position: absolute;
   bottom:0;

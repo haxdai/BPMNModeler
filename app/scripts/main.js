@@ -56,7 +56,7 @@
 		getSVGDocument("images/modeler-defs.svg", "modelerContainer", function() {
 			app.svg = SVG.adopt(document.getElementById("modeler"));
 			app.svg.size(2000, 2000);
+			//MODELER.svg.text("Hola Mundo").move(200,200);
 		});
 	});
-
 })(window);
