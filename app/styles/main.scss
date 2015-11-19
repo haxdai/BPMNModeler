@@ -2,7 +2,6 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 $fa-font-path: "../bower_components/font-awesome/fonts";
 $toolbar-width: 55px;
 $propspanel-width: 0px; //0px - invisible
-$subbar-height:40px;
 $navbar-height:52px;
 
 // bower:scss
@@ -98,7 +97,7 @@ div.modeler-toolbar-container {
 //Canvas
 div.modeler-canvas-container {
   position: absolute;
-  top:$navbar-height + $subbar-height;
+  top:$navbar-height;
   left:$toolbar-width;
   right:$propspanel-width;
   bottom:20px;
